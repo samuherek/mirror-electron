@@ -1,0 +1,34 @@
+{
+  "name": "mirror-electron",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "electron": "^2.0.9",
+    "electron-builder": "^20.28.4",
+    "foreman": "^3.0.1",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "dev": "nf start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "ebuild": "yarn build && node_modules/.bin/build"
+  },
+  "description": "React and Electron Awesome App",
+  "homepage": "./",
+  "main": "electron/main.js",
+  "build": {
+    "productName": "React Electron App",
+    "appId": "com.samuherek.mirrorelectron",
+    "electronVersion": "2.0.9",
+    "files": [
+      "build/**/*",
+      "electron/*"
+    ]
+  }
+}
